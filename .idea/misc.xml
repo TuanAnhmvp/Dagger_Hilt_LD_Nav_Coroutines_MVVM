@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android_Studio/TryhardKotlin/dagger_hilt_mvvm_room_LD_Nav_Coroutines/app/src/main/res/layout/activity_main.xml" value="0.253125" />
+        <entry key="..\:/Android_Studio/TryhardKotlin/dagger_hilt_mvvm_room_LD_Nav_Coroutines/app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="..\:/Android_Studio/TryhardKotlin/dagger_hilt_mvvm_room_LD_Nav_Coroutines/app/src/main/res/layout/fragment_add_to_do.xml" value="0.2" />
+        <entry key="..\:/Android_Studio/TryhardKotlin/dagger_hilt_mvvm_room_LD_Nav_Coroutines/app/src/main/res/layout/fragment_add_todo.xml" value="0.144" />
+        <entry key="..\:/Android_Studio/TryhardKotlin/dagger_hilt_mvvm_room_LD_Nav_Coroutines/app/src/main/res/layout/fragment_todo_list.xml" value="0.2" />
       </map>
     </option>
   </component>

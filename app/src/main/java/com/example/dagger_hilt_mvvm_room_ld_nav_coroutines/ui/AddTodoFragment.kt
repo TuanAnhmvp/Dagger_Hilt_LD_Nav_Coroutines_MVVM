@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.R
 import com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.databinding.FragmentAddTodoBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class AddTodoFragment : Fragment() {
 
     private var _binding: FragmentAddTodoBinding? = null

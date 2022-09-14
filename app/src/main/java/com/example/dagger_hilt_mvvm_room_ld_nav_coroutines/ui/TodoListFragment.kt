@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.R
 import com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.databinding.FragmentTodoListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class TodoListFragment : Fragment() {
 
     private var _binding: FragmentTodoListBinding? = null

@@ -31,6 +31,7 @@ class AddTodoFragment : Fragment() {
         binding.btnCancel.setOnClickListener {
             view.findNavController().navigate(
                 R.id.action_addTodoFragment_to_todoListFragment
+            //
             )
         }
     }

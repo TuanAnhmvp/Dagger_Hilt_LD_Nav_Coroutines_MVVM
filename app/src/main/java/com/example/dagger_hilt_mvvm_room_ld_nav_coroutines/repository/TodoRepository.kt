@@ -6,6 +6,9 @@ import javax.inject.Inject
 
 
 class TodoRepository @Inject constructor(private val dao: TodoDao){
+
+    suspend fun deleteToDo(todo: Todo) = dao.deleteToDo(todo)
+
     suspend fun insertTodo(todo: Todo) = dao.insertTodo(todo)
 
     fun getAllTodo() = dao.getAllToDos()

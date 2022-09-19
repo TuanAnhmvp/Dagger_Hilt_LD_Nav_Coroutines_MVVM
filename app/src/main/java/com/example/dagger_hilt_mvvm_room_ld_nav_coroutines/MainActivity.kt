@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupNavigation()
+        setupNavigationView()
     }
 
-    private fun setupNavigation() {
+    private fun setupNavigationView() {
         val navHostFrag =
             supportFragmentManager.findFragmentById(R.id.fragmentHost) as NavHostFragment
 

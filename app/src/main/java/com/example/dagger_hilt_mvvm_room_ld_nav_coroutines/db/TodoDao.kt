@@ -1,9 +1,6 @@
 package com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.db
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.model.Todo
 import kotlinx.coroutines.flow.Flow
 
@@ -15,4 +12,7 @@ interface TodoDao {
 
     @Query("SELECT * FROM todo ORDER BY todoTitle ASC")
     fun getAllToDos(): Flow<List<Todo>>
+
+    @Delete()
+    suspend fun deleteToDo(todo: Todo)
 }

@@ -11,8 +11,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class TodoViewModel @Inject constructor(private val todoRepository: TodoRepository): ViewModel() {
+
     fun insertTodo(todo: Todo) = viewModelScope.launch {
         todoRepository.insertTodo(todo)
+    }
+
+    fun deleteTodo(todo: Todo) = viewModelScope.launch {
+        todoRepository.deleteToDo(todo)
     }
 
     val getAllToDos = todoRepository.getAllTodo().asLiveData()

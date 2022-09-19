@@ -36,7 +36,10 @@ class AddTodoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
         binding.btnCancel.setOnClickListener {
+            binding.etTodoName.text.clear()
             view.findNavController().navigate(
                 R.id.action_addTodoFragment_to_todoListFragment
             //

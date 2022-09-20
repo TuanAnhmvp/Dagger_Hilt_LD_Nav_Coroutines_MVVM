@@ -49,7 +49,7 @@ class TodoListFragment : Fragment() {
     }
 
     private fun setupRv() {
-        todoAdapter = TodoAdapter()
+        todoAdapter = TodoAdapter(onItemDelete)
         binding.rvTodoList.apply {
             adapter = todoAdapter
             layoutManager = LinearLayoutManager(requireContext())
@@ -72,6 +72,10 @@ class TodoListFragment : Fragment() {
             binding.rvTodoList.visibility = View.GONE
             binding.cardView.visibility = View.VISIBLE
         }
+    }
+
+    private val onItemDelete: (Todo) -> Unit = {
+        viewModel.deleteTodo(it)
     }
 
 

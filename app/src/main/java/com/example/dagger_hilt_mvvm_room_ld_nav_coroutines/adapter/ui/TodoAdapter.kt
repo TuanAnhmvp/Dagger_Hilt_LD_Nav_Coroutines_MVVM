@@ -1,5 +1,6 @@
 package com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.adapter.ui
 
+import android.content.Context
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.databinding.ItemTodoLayoutBinding
 import com.example.dagger_hilt_mvvm_room_ld_nav_coroutines.model.Todo
 
-class TodoAdapter: RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
+class TodoAdapter(
+    private val onDelete: (Todo) -> Unit): RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
     inner class TodoViewHolder(val binding: ItemTodoLayoutBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -60,6 +62,8 @@ class TodoAdapter: RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
                 }
             }
         }
+
+        holder.binding.itemImageDelete.setOnClickListener { onDelete(currentToDo) }
 
     }
 
